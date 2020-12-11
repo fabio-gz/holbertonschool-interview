@@ -11,7 +11,7 @@ def canUnlockAll(boxes):
     while stack:
         i = stack.pop()
         for j in boxes[i]:
-            if j not in unlocked:
+            if j not in unlocked and j < len(boxes):
                 stack.append(j)
                 unlocked.add(j)
             if len(unlocked) == len(boxes):
