@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""unlocked boxes problem """
+
+
 def canUnlockAll(boxes):
     """checks if all boxes can be opened."""
 
@@ -13,5 +16,4 @@ def canUnlockAll(boxes):
                 unlocked.add(j)
             if len(unlocked) == len(boxes):
                 return True
-
     return False
