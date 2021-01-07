@@ -5,7 +5,7 @@ Minimun operations nedeed
 
 
 def minOperations(n):
-    if (n < 2):
+    if (n < 1):
         return 0
 
     op = 0
