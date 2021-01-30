@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 'a script that reads stdin line by line and computes metrics'
 import sys
+import traceback
 
 
 def info(size, dicti):
@@ -29,4 +30,4 @@ try:
 
 except KeyboardInterrupt:
     info(size, codes)
-    raise
+    traceback.print_exc()
