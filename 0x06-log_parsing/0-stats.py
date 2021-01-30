@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'a script that reads stdin line by line and computes metrics, size'
+'a script that reads stdin line by line and computes metrics size'
 import sys
 import traceback
 
