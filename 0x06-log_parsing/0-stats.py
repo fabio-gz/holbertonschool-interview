@@ -11,12 +11,14 @@ def info(size, dicti):
             print("{}: {}".format(k, codes[k]))
 
 size = 0
+c = 1
 codes = {'200': 0, '301': 0, '400': 0, '401': 0,
         '403': 0, '404': 0, '405': 0, '500': 0}
 
 try:
-    for c, l in enumerate(sys.stdin, start=1):
+    for l in (sys.stdin):
         try:
+            c += 1
             size += int(l.split()[-1])
             if c % 10 == 0:
                 info(size, codes)
