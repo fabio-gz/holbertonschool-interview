@@ -14,6 +14,8 @@ codes = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0, '404': 0, '405': 0, '
 
 try:
     for c, l in enumerate(sys.stdin, start=1):
+        if c % 10 == 0:
+            info(size, codes)
         try:
             size += int(l.split()[-1])
         except:
@@ -23,8 +25,6 @@ try:
                 codes[str(l.split()[-2])] += 1
         except:
             pass
-        if c % 10 == 0:
-            info(size, codes)
     info(size, codes)
 
 except KeyboardInterrupt:
