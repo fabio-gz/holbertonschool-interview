@@ -11,17 +11,17 @@ def info(size, dicti):
             print("{}: {}".format(k, codes[k]))
 
 size = 0
-c = 1
+c = 0
 codes = {'200': 0, '301': 0, '400': 0, '401': 0,
          '403': 0, '404': 0, '405': 0, '500': 0}
 
 try:
     for l in (sys.stdin):
+        if c % 10 == 0 and c != 0:
+            info(size, codes)
+        c += 1
         try:
-            c += 1
             size += int(l.split()[-1])
-            if c % 10 == 0:
-                info(size, codes)
         except:
             pass
         try:
