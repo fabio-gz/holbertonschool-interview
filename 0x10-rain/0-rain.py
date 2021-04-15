@@ -4,7 +4,7 @@
 
 def rain(walls):
     """amount of water retained"""
-    if len(walls) = 0:
+    if len(walls) == 0:
         return 0
 
     (left, right) = (0, len(walls) - 1)
